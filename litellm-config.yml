@@ -1,0 +1,196 @@
+# ===========================
+# LiteLLM Proxy config (Azure)
+# ===========================
+litellm_settings:
+  set_verbose: true
+  drop_params: true
+  # If you’ll use Redis for rate limits / routing metrics, keep these in env
+  # redis_host: os.environ/REDIS_HOST
+  # redis_port: os.environ/REDIS_PORT
+  # redis_password: os.environ/REDIS_PASSWORD
+
+# ---------------------------
+# Models exposed by the proxy
+# ---------------------------
+model_list:
+  # ===== GPT-5 Series =====
+  - model_name: gpt-5
+    litellm_params:
+      model: azure/gpt-5
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5
+
+  - model_name: gpt-5-chat
+    litellm_params:
+      model: azure/gpt-5-chat
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5
+
+  - model_name: gpt-5-codex
+    litellm_params:
+      model: azure/gpt-5-codex
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5
+
+  - model_name: gpt-5-mini
+    litellm_params:
+      model: azure/gpt-5-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5-mini
+
+  # ===== GPT-4.1 / 4o =====
+  - model_name: gpt-4.1
+    litellm_params:
+      model: azure/gpt-4.1
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-4.1
+
+  - model_name: gpt-4.1-mini
+    litellm_params:
+      model: azure/gpt-4.1-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-4.1-mini
+
+  - model_name: gpt-4o
+    litellm_params:
+      model: azure/gpt-4o
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-4o
+
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: azure/gpt-4o-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-4o-mini
+
+  - model_name: gpt-4o-mini-tts
+    litellm_params:
+      model: azure/gpt-4o-mini-tts
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      mode: tts
+      base_model: gpt-4o-mini-tts
+
+  # ===== O-Series (explicit routing) =====
+  - model_name: o3
+    litellm_params:
+      model: azure/o_series/o3
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: o3
+
+  - model_name: o3-mini
+    litellm_params:
+      model: azure/o_series/o3-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: o3-mini
+
+  - model_name: o4-mini
+    litellm_params:
+      model: azure/o_series/o4-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: o4-mini
+
+  # ===== Audio / Realtime / Images / Embeddings =====
+  - model_name: gpt-audio
+    litellm_params:
+      model: azure/gpt-audio
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      mode: audio
+
+  - model_name: gpt-realtime
+    litellm_params:
+      model: azure/gpt-realtime
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      mode: realtime
+
+  - model_name: gpt-image-1
+    litellm_params:
+      model: azure/gpt-image-1
+      api_base: os.environ/AZURE_API_BASE_IMAGES         # allow a separate base/version if needed
+      api_version: os.environ/AZURE_API_VERSION_IMAGES   # e.g., 2023-06-01-preview
+      api_key: os.environ/AZURE_API_KEY_IMAGES           # or reuse AZURE_API_KEY
+    model_info:
+      mode: image_generation
+      base_model: dall-e-3
+
+  - model_name: text-embedding-3-large
+    litellm_params:
+      model: azure/text-embedding-3-large
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      mode: embeddings
+      base_model: text-embedding-3-large
+
+  - model_name: text-embedding-3-small
+    litellm_params:
+      model: azure/text-embedding-3-small
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      mode: embeddings
+      base_model: text-embedding-3-small
+
+  # ===== Optional: FLUX (only if your Azure endpoint exposes them OpenAI-compatible) =====
+  - model_name: FLUX.1.1-pro
+    litellm_params:
+      model: azure/FLUX.1.1-pro
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+
+  - model_name: FLUX.1-Kontext-pro
+    litellm_params:
+      model: azure/FLUX.1-Kontext-pro
+      api_base: os.environ/AZURE_API_BASE
+      api_version: os.environ/AZURE_API_VERSION
+      api_key: os.environ/AZURE_API_KEY
+
+# ---------------------------
+# Routing defaults
+# ---------------------------
+router_settings:
+  default_model: gpt-4o
