@@ -167,7 +167,8 @@ model_list:
     litellm_params:
       model: azure/text-embedding-3-large
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview: os.environ/AZURE_API_KEY
+      api_version: "1"
+      api_key: os.environ/AZURE_API_KEY
     model_info:
       mode: embeddings
       base_model: text-embedding-3-large
@@ -176,7 +177,8 @@ model_list:
     litellm_params:
       model: azure/text-embedding-3-small
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview: os.environ/AZURE_API_KEY
+      api_version: "1"
+      api_key: os.environ/AZURE_API_KEY
     model_info:
       mode: embeddings
       base_model: text-embedding-3-small
