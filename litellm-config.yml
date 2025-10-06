@@ -27,7 +27,7 @@ model_list:
 
   - model_name: gpt-5-test
     litellm_params:
-      model: azure/gpt-5-test
+      model: azure/gpt-5
       api_base: os.environ/AZURE_API_BASE_TEST
       api_key: os.environ/AZURE_API_KEY
     model_info:
