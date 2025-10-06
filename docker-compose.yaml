@@ -36,7 +36,7 @@ services:
       LANGFUSE_HOST: ${LANGFUSE_HOST}
 
     command:
-      ["--config", "/app/config.yml", "--port", "4000", "--detailed_debug"]
+      ["--config", "/app/config.yaml", "--port", "4000", "--detailed_debug"]
     restart: always
 
   db:
