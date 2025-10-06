@@ -20,24 +20,14 @@ model_list:
     litellm_params:
       model: azure/gpt-5
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
-      base_model: gpt-5
-
-  - model_name: gpt-5-test
-    litellm_params:
-      model: azure/gpt-5
-      api_base: os.environ/AZURE_API_BASE_TEST
-      api_key: os.environ/AZURE_API_KEY
-    model_info:
-      base_model: gpt-5      
+      base_model: gpt-5   
 
   - model_name: gpt-5-chat
     litellm_params:
       model: azure/gpt-5-chat
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-5
@@ -46,7 +36,6 @@ model_list:
     litellm_params:
       model: azure/gpt-5-codex
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-5
@@ -55,7 +44,6 @@ model_list:
     litellm_params:
       model: azure/gpt-5-mini
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-5-mini
@@ -64,7 +52,6 @@ model_list:
     litellm_params:
       model: azure/gpt-5-nano
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-5-nano
@@ -74,7 +61,6 @@ model_list:
     litellm_params:
       model: azure/gpt-4.1
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-4.1
@@ -83,7 +69,6 @@ model_list:
     litellm_params:
       model: azure/gpt-4.1-mini
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-4.1-mini
@@ -92,7 +77,6 @@ model_list:
     litellm_params:
       model: azure/gpt-4.1-nano
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-4.1-nano
@@ -101,7 +85,6 @@ model_list:
     litellm_params:
       model: azure/gpt-4o
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-4o
@@ -110,7 +93,6 @@ model_list:
     litellm_params:
       model: azure/gpt-4o-mini
       api_base: os.environ/AZURE_API_BASE
-      api_version: "preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-4o-mini
@@ -119,7 +101,6 @@ model_list:
     litellm_params:
       model: azure/gpt-4o-mini-tts
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       mode: tts
@@ -130,7 +111,6 @@ model_list:
     litellm_params:
       model: azure/o_series/o1
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: o1
@@ -139,7 +119,6 @@ model_list:
     litellm_params:
       model: azure/o_series/o3
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: o3
@@ -148,7 +127,6 @@ model_list:
     litellm_params:
       model: azure/o_series/o3-mini
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: o3-mini
@@ -157,7 +135,6 @@ model_list:
     litellm_params:
       model: azure/o_series/o4-mini
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: o4-mini
@@ -166,9 +143,8 @@ model_list:
   - model_name: gpt-image-1
     litellm_params:
       model: azure/gpt-image-1
-      api_base: os.environ/AZURE_API_BASE_IMAGES
-      api_version: "2025-01-01-preview"
-      api_key: os.environ/AZURE_API_KEY_IMAGES
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
     model_info:
       mode: image_generation
       base_model: dall-e-3
@@ -177,7 +153,6 @@ model_list:
     litellm_params:
       model: azure/text-embedding-3-large
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       mode: embeddings
@@ -187,7 +162,6 @@ model_list:
     litellm_params:
       model: azure/text-embedding-3-small
       api_base: os.environ/AZURE_API_BASE
-      api_version: "2025-01-01-preview"
       api_key: os.environ/AZURE_API_KEY
     model_info:
       mode: embeddings
