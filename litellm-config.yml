@@ -5,6 +5,7 @@ litellm_settings:
   set_verbose: true
   drop_params: true
   callbacks: ["langfuse_otel"]
+  success_callback: ["langfuse_otel"]
 
 general_settings:
   store_model_in_db: true
