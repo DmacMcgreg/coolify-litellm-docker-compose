@@ -114,6 +114,15 @@ model_list:
       mode: tts
       base_model: gpt-4o-mini-tts
 
+  - model_name: gpt-4o-transcribe-diarize
+    litellm_params:
+      model: azure/gpt-4o-transcribe-diarize
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:      
+      mode: audio_transcription
+      base_model: gpt-4o-mini-tts
+
   # ===== O-Series =====
   - model_name: o1
     litellm_params:
