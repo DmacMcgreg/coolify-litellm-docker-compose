@@ -22,7 +22,7 @@ model_list:
       api_base: os.environ/AZURE_API_BASE_ANTHROPIC
       api_key: os.environ/AZURE_API_KEY
     model_info:
-      base_model: claude-sonnet-4-5
+      base_model: claude-sonnet-4-5-20250929
 
   - model_name: claude-opus-4-5
     litellm_params:
@@ -30,7 +30,7 @@ model_list:
       api_base: os.environ/AZURE_API_BASE_ANTHROPIC
       api_key: os.environ/AZURE_API_KEY
     model_info:
-      base_model: claude-opus-4-5
+      base_model: claude-opus-4-5-20251101
 
   # ===== GPT-5 Series =====
   - model_name: gpt-5.1
