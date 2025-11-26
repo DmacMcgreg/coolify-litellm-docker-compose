@@ -15,7 +15,48 @@ general_settings:
 # Models exposed by the proxy
 # ---------------------------
 model_list:
+  # ===== Anthropic =====
+  - model_name: claude-sonnet-4-5
+    litellm_params:
+      model: azure/claude-sonnet-4-5
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: claude-sonnet-4-5
+
+  - model_name: claude-opus-4-5
+    litellm_params:
+      model: azure/claude-opus-4-5
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: claude-opus-4-5
+
   # ===== GPT-5 Series =====
+  - model_name: gpt-5.1
+    litellm_params:
+      model: azure/gpt-5.1
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.1
+
+  - model_name: gpt-5.1-mini
+    litellm_params:
+      model: azure/gpt-5.1-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.1-mini
+
+  - model_name: gpt-5.1-nano
+    litellm_params:
+      model: azure/gpt-5.1-nano
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.1-nano
+  
   - model_name: gpt-5
     litellm_params:
       model: azure/gpt-5
