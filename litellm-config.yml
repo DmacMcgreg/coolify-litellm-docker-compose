@@ -18,7 +18,7 @@ model_list:
   # ===== Anthropic =====
   - model_name: claude-sonnet-4-5
     litellm_params:
-      model: azure/claude-sonnet-4-5
+      model: anthropic/claude-sonnet-4-5
       api_base: os.environ/AZURE_API_BASE_ANTHROPIC
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -26,7 +26,7 @@ model_list:
 
   - model_name: claude-opus-4-5
     litellm_params:
-      model: azure/claude-opus-4-5
+      model: anthropic/claude-opus-4-5
       api_base: os.environ/AZURE_API_BASE_ANTHROPIC
       api_key: os.environ/AZURE_API_KEY
     model_info:
