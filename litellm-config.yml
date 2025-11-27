@@ -13,8 +13,8 @@ general_settings:
 
 files_settings:
   - custom_llm_provider: azure
-    api_base: os.environ/AZURE_API_BASE
-    api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
 
 # ---------------------------
 # Models exposed by the proxy
