@@ -236,6 +236,15 @@ model_list:
       mode: embeddings
       base_model: text-embedding-3-small
 
+  # ===== Grok =====
+  - model_name: grok-4-fast-non-reasoning
+    litellm_params:
+      model: azure/grok-4-fast-non-reasoning
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: grok-4-fast-non-reasoning
+
 # ---------------------------
 # Routing defaults
 # ---------------------------
