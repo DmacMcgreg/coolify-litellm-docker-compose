@@ -47,6 +47,9 @@ model_list:
   - model_name: gpt-5.2
     litellm_params:
       model: azure/gpt-5.2
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -55,6 +58,9 @@ model_list:
   - model_name: gpt-5.2-chat
     litellm_params:
       model: azure/gpt-5.2
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -63,6 +69,9 @@ model_list:
   - model_name: gpt-5.2-codex
     litellm_params:
       model: azure/gpt-5.2-codex
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -71,6 +80,9 @@ model_list:
   - model_name: gpt-5.1-codex
     litellm_params:
       model: azure/gpt-5.1-codex
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -79,6 +91,9 @@ model_list:
   - model_name: gpt-5.1
     litellm_params:
       model: azure/gpt-5.1
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -87,6 +102,9 @@ model_list:
   - model_name: gpt-5.1-chat
     litellm_params:
       model: azure/gpt-5.1-chat
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -111,6 +129,9 @@ model_list:
   - model_name: gpt-5
     litellm_params:
       model: azure/gpt-5
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
@@ -119,6 +140,9 @@ model_list:
   - model_name: gpt-5-chat
     litellm_params:
       model: azure/gpt-5-chat
+      thinking:
+        type: enabled
+        budget_tokens: 4024
       api_base: os.environ/AZURE_API_BASE
       api_key: os.environ/AZURE_API_KEY
     model_info:
