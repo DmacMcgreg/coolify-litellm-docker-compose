@@ -47,6 +47,7 @@ model_list:
   - model_name: gpt-5.2
     litellm_params:
       model: azure/gpt-5.2
+      reasoning_effort: medium
       thinking:
         type: enabled
         budget_tokens: 4024
@@ -58,6 +59,7 @@ model_list:
   - model_name: gpt-5.2-chat
     litellm_params:
       model: azure/gpt-5.2
+      reasoning_effort: minimal
       thinking:
         type: enabled
         budget_tokens: 4024
@@ -69,6 +71,7 @@ model_list:
   - model_name: gpt-5.2-codex
     litellm_params:
       model: azure/gpt-5.2-codex
+      reasoning_effort: high
       thinking:
         type: enabled
         budget_tokens: 4024
@@ -80,6 +83,7 @@ model_list:
   - model_name: gpt-5.1-codex
     litellm_params:
       model: azure/gpt-5.1-codex
+      reasoning_effort: high
       thinking:
         type: enabled
         budget_tokens: 4024
@@ -91,6 +95,7 @@ model_list:
   - model_name: gpt-5.1
     litellm_params:
       model: azure/gpt-5.1
+      reasoning_effort: medium
       thinking:
         type: enabled
         budget_tokens: 4024
@@ -102,6 +107,7 @@ model_list:
   - model_name: gpt-5.1-chat
     litellm_params:
       model: azure/gpt-5.1-chat
+      reasoning_effort: minimal
       thinking:
         type: enabled
         budget_tokens: 4024
