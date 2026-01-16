@@ -43,6 +43,38 @@ model_list:
       base_model: claude-opus-4-5-20251101
 
   # ===== GPT-5 Series =====
+  - model_name: gpt-5.2
+    litellm_params:
+      model: azure/gpt-5.2
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.2
+
+  - model_name: gpt-5.2-chat
+    litellm_params:
+      model: azure/gpt-5.2
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.2-chat
+
+  - model_name: gpt-5.2-codex
+    litellm_params:
+      model: azure/gpt-5.2-codex
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.2-codex
+
+  - model_name: gpt-5.1-codex
+    litellm_params:
+      model: azure/gpt-5.1-codex
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.1-codex
+      
   - model_name: gpt-5.1
     litellm_params:
       model: azure/gpt-5.1
@@ -50,6 +82,14 @@ model_list:
       api_key: os.environ/AZURE_API_KEY
     model_info:
       base_model: gpt-5.1
+
+  - model_name: gpt-5.1-chat
+    litellm_params:
+      model: azure/gpt-5.1-chat
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: gpt-5.1-chat
 
   - model_name: gpt-5.1-mini
     litellm_params:
