@@ -58,7 +58,7 @@ model_list:
 
   - model_name: gpt-5.2-chat
     litellm_params:
-      model: azure/gpt-5.2
+      model: azure/gpt-5.2-chat
       reasoning_effort: minimal
       thinking:
         type: enabled
