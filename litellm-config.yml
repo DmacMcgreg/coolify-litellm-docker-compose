@@ -4,6 +4,7 @@
 litellm_settings:
   set_verbose: true
   modify_params: true
+  drop_params: true
   callbacks: ["langfuse_otel"]
   success_callback: ["langfuse_otel"]
 
