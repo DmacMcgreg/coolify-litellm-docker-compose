@@ -307,6 +307,15 @@ model_list:
       mode: embeddings
       base_model: text-embedding-3-small
 
+  # ===== Moonshot AI =====
+  - model_name: kimi-k2.5
+    litellm_params:
+      model: azure/Kimi-K2.5
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+    model_info:
+      base_model: kimi-k2.5-preview
+
   # ===== Grok =====
   - model_name: grok-4-fast-non-reasoning
     litellm_params:
